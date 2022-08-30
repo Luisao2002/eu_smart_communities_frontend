@@ -11,14 +11,14 @@
     </header>
   <div v-if="people.length">
     <MDBRow :cols="['1','md-4']" class="g-4">
-    <div v-bind:key="person.index" v-for="person in people">
+    <div v-bind:key="people.index" v-for="people in people">
       <MDBCol>
         <MDBCard>
           <MDBCardImg :src="imageLink + people.Image" top alt="..."/>
           <MDBCardBody>
-            <MDBCardTitle>{{person.name}}</MDBCardTitle>
+            <MDBCardTitle>{{people.name}}</MDBCardTitle>
             <MDBCardText>
-              {{person.biography}}
+              {{people.biography}}
             </MDBCardText>
           </MDBCardBody>
         </MDBCard>
@@ -62,3 +62,4 @@
     }
   }
   </script>
+  <style></style>

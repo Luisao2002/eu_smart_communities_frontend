@@ -1,14 +1,6 @@
 <template>
     <div class="speakers">
       <div>
-      <header>
-        <!-- Navbar -->
-        <MDBNavbar></MDBNavbar>
-        <MDBNavbarToggler></MDBNavbarToggler>
-        <MDBNavbarNav></MDBNavbarNav>
-        <MDBNavbarItem></MDBNavbarItem>
-        <!-- Navbar -->
-      </header>
     <div v-if="sessions.length">
       <MDBRow :cols="['1','md-4']" class="g-4">
       <div v-bind:key="session.index" v-for="session in sessions">
@@ -35,14 +27,10 @@
   </template>
   
   <script>
-    import { MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem, MDBCol, MDBRow, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImg } from 'mdb-vue-ui-kit';
+    import {MDBCol, MDBRow, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImg } from 'mdb-vue-ui-kit';
     export default {
       name: 'HelloWorld',
       components: {
-        MDBNavbar,
-        MDBNavbarToggler,
-        MDBNavbarNav,
-        MDBNavbarItem,
         MDBCol,
         MDBRow,
         MDBCard,
