@@ -1,24 +1,17 @@
 <template>
   <div class="speakers">
+    <h1>Speakers</h1>
     <div>
-    <header>
-      <!-- Navbar -->
-      <MDBNavbar></MDBNavbar>
-      <MDBNavbarToggler></MDBNavbarToggler>
-      <MDBNavbarNav></MDBNavbarNav>
-      <MDBNavbarItem></MDBNavbarItem>
-      <!-- Navbar -->
-    </header>
   <div v-if="people.length">
     <MDBRow :cols="['1','md-4']" class="g-4">
     <div v-bind:key="people.index" v-for="people in people">
       <MDBCol>
         <MDBCard>
-          <MDBCardImg :src="imageLink + people.Image" top alt="..."/>
+          <MDBCardImg :src="imageLink + people.image" top alt="..."/>
           <MDBCardBody>
             <MDBCardTitle>{{people.name}}</MDBCardTitle>
             <MDBCardText>
-              {{people.biography}}
+              {{people.function}}
             </MDBCardText>
           </MDBCardBody>
         </MDBCard>
@@ -31,14 +24,10 @@
 </template>
 
 <script>
-  import { MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem, MDBCol, MDBRow, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImg } from 'mdb-vue-ui-kit';
+  import {MDBCol, MDBRow, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImg } from 'mdb-vue-ui-kit';
   export default {
     name: 'HelloWorld',
     components: {
-      MDBNavbar,
-      MDBNavbarToggler,
-      MDBNavbarNav,
-      MDBNavbarItem,
       MDBCol,
       MDBRow,
       MDBCard,
