@@ -7,12 +7,13 @@
     <div v-bind:key="people.index" v-for="people in people">
       <MDBCol>
         <MDBCard>
-          <MDBCardImg :src="imageLink + people.image" top alt="..."/>
+          <MDBCardImg v-if="people.image" :src="imageLink + people.image.url" top alt="..."/>
           <MDBCardBody>
             <MDBCardTitle>{{people.name}}</MDBCardTitle>
             <MDBCardText>
               {{people.function}}
             </MDBCardText>
+            <button class="button button2">See Bio</button>
           </MDBCardBody>
         </MDBCard>
       </MDBCol>
@@ -39,7 +40,7 @@
     data(){
       return {
         people: [],
-        imageLink: "http://localhost:1337/people/"
+        imageLink: "http://localhost:1337"
       }
     },
       mounted() {
@@ -51,4 +52,17 @@
     }
   }
   </script>
-  <style></style>
+  <style>
+    .button2 {
+  background-color: #008CBA; 
+  color: white; 
+  border: 2px solid #008CBA;
+  border-radius: 5px;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  opacity: 70%;
+  color:white;
+}
+  </style>
