@@ -13,7 +13,7 @@
             <MDBCardText>
               {{people.function}}
             </MDBCardText>
-            <!--<button id="myBtn" class="button button2">See Bio</button>-->
+           <!--<button id="myBtn" class="button button2">See Bio</button>-->
           </MDBCardBody>
         </MDBCard>
       </MDBCol>
