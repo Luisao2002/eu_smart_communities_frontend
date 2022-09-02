@@ -1,10 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import 'mdb-vue-ui-kit/css/mdb.min.css'
-import { createHead } from "@vueuse/head"
-
-const head = createHead()
-
 
 
 const routes = [

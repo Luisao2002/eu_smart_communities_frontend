@@ -1,9 +1,15 @@
 <template>
+   <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
   <div class="speakers">
     <h1>Speakers</h1>
     <div>
   <div v-if="people.length">
-    <MDBRow :cols="['1','md-4']" class="g-4">
+    <MDBRow :cols="['1','md-6']" class="g-300">
     <div v-bind:key="people.index" v-for="people in people">
       <MDBCol>
         <MDBCard>
@@ -53,6 +59,9 @@
   }
   </script>
   <style>
+    .speakers{
+      position: relative;
+    }
     .button2 {
   background-color: #f0ed39; 
   color: white; 
@@ -102,5 +111,6 @@
   text-decoration: none;
   cursor: pointer;
 }
+
   </style>
 
